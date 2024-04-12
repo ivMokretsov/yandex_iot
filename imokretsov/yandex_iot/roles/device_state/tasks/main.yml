@@ -1,0 +1,12 @@
+---
+# tasks file for device_state
+- name: Make an API request to Yandex IoT
+  imokretsov.yandex_iot.yandex_iot:
+    resource_name: "{{ resource_name }}"
+    token: "{{ token }}"
+    resource_params: "{{ resource_params }}"
+  register: response
+
+- name: Output response from API
+  debug:
+    var: response

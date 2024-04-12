@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  gather_facts: no
+  roles:
+    - role: imokretsov.yandex_iot.device_state
+      vars:
+        resource_name: "device_state"
+        resource_params:
+          "device_id": "61b858f4-6255-4785-b31c-487a1ecf6c57"

@@ -1,0 +1,11 @@
+---
+# tasks file for user_info
+- name: Make an API request to Yandex IoT
+  imokretsov.yandex_iot.yandex_iot:
+    resource_name: "{{ resource_name }}"
+    token: "{{ token }}"
+  register: response
+
+- name: Output response from API
+  debug:
+    var: response
